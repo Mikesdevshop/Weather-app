@@ -1,0 +1,13 @@
+<form method="POST">
+    {% csrf_token %}
+    <div>
+        <div>
+            {{ form.name }}
+        </div>
+        <div>
+            <button>
+                Add City
+            </button>
+        </div>
+    </div>
+</form>
