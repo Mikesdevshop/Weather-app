@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #django-compressor
-    # 'compressor',
+    'compressor',
 ]
 
 MIDDLEWARE = [
@@ -122,17 +122,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-# STATICFILES_FINDERS = [
-#     'compressor.finders.CompressorFinder',
-# ]
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, '/static/'),
-#     '/weather/templates/',
-# ]
-# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_FINDERS = [
+    'compressor.finders.CompressorFinder',
+]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, '/static/'),
+    '/weather/templates/',
+]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = '/static/'
 
 #django-compressor
-# COMPRESS_PRECOMIPLERS = (
-#     ('text/x-scss', 'django_libsass.SassComplier'),
-# )
+COMPRESS_PRECOMIPLERS = (
+    ('text/x-scss', 'django_libsass.SassComplier'),
+)

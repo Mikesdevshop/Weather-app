@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     {% load static %}
-    {% comment %} {% load compress %} {% endcomment %}
+    {% load compress %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>{% block title %}Weather App{% endblock %}</title>
-    {% comment %} {% compress css %} {% endcomment %}
+    {% compress css %}
         <link rel="styelsheet" type="text/x-scss" href="{% static 'weather/style.scss' %}">
-    {% comment %} {% endcompress %} {% endcomment %}
+    {% endcompress %}
 </head>
 <body>
     <div id="topbar">
