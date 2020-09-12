@@ -1,7 +1,19 @@
 {% extends "weather/base.html" %}
-{% extends "weather/cityForm.html" %}
 
 {% block content %}
+    <form method="POST">
+    {% csrf_token %}
+    <div>
+        <div>
+            {{ form.name }}
+        </div>
+        <div>
+            <button>
+                Add City
+            </button>
+        </div>
+    </div>
+</form>
     {% for weather in weather_data %}
     <div class="box">
         <h1>{{ weather.city }}</h1>
