@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load sass_tags %}
     {% load static %}
-    {% load compress %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>{% block title %}Weather App{% endblock %}</title>
-    {% compress css %}
-        <link rel="styelsheet" type="text/x-scss" href="{% static 'weather/style.scss' %}">
-    {% endcompress %}
+    <link href="{% sass_src 'style.scss' %}" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div id="topbar">
